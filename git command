@@ -1,0 +1,13 @@
+####to do version control
+###first we will create two global varaible. whenever you will upload the code to a repo automatically the global varaible will be applied
+git config --global user.name "gopal"
+git config --global user.email "gopal1409@gmail.com"
+###next we will create a directory inside the directory we will have all our code. 
+cd ..
+mkdir test
+########
+git status
+####this will show you that git is not managing the folder
+###to manage the folder we will give a command 
+git init
+##3git init will create a folder .git inside the .git folder we will have all the refrences
