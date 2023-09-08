@@ -10,4 +10,18 @@ git status
 ####this will show you that git is not managing the folder
 ###to manage the folder we will give a command 
 git init
-##3git init will create a folder .git inside the .git folder we will have all the refrences
+##3git init will create a folder .git inside the .git folder we will have all the refrence
+##3importance of .git folder
+
+  510  git status
+  511  git init
+  512  git status
+  513  ls
+  514  ls -a
+  515  rm -rf .git
+  516  git status
+  517  git init
+  518  cd .git
+  519  ls
+  520  history
+  521  cd ..
