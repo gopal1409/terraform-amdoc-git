@@ -25,3 +25,15 @@ git init
   519  ls
   520  history
   521  cd ..
+###lets do our first commit
+  524  touch main.tf
+  525  touch varaible.tf
+  526  touch dev.auto.tf
+  527  touch auth.tf
+  528  git status
+  529  git add dev.auto.tf main.tf varaible.tf
+  530  git status
+  531  git commit -m "terraform intialization"
+  532  git log
+  533  git status
+
