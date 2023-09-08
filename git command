@@ -53,4 +53,26 @@ git init
   565  git add dev.auto.tf
   566  git commit -m "modified the file"
 
+###ignore and reset
+ 575  git add .
+  576  git status
+  577  git add -A
+  578  git status
+  579  git reset
+  580  git status
+  581  notepad .gitignore
+###on top of te gitignore file put the file name which you want to ignore. 
+###also check the file name it should not have any extension
+ls
+  582  git status
+  583  mv .gitignore.txt .gitignore
+  584  git status
+  586  git add .
+  587  git status
+  588  git commit -m "ignore exercise"
+  589  git status
+  590  lsa
+  591  ls
+
+
 
