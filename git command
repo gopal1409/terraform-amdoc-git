@@ -74,5 +74,44 @@ ls
   590  lsa
   591  ls
 
+###modify file from commit and modifyt he commit message also
+597  touch terratest
+  598  git status
+  599  git commit -m "terratest file added wrongly"
+  600  git add .
+  601  git commit -m "terratest file added wrongly"
+  602  git status
+  603  git restore --staged terratest
+  604  git status
+  605  git log
+  606  git restore --soft HEAD~1
+  607  git restore
+  608  git reflog
+  609  git restore --soft HEAD~0
+  610  git reset --soft HEAD1~1
+  611  git reset --soft HEAD~1
+  612  git status
+  613  git reset
+  614  git status
+  615  clear
+  616  git reflog
+  617  touch terraauth
+  618  git status
+  619  git add .
+  620  git commit -m "two file"
+  621  git status
+  622  git reflog
+  623  git reset --soft HEAD~1
+  624  git status
+  625  git reset
+  626  git status
+  627  git restore --staged nameofthefile
+  628  git reflog
+  629  git add .
+  630  git commit -m "wrong message print"
+  631  git log
+  632  git commit --amend
+  633  git log
+  634  git reflog
 
 
