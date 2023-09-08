@@ -36,4 +36,21 @@ git init
   531  git commit -m "terraform intialization"
   532  git log
   533  git status
+###make change and see the difference
+553  git status
+  554  notepad dev.auto.tf
+  555  git status
+  556  git add dev.auto.tf
+  557  git status
+  558  git commit -m "modified dev.auto file"
+  559  git log
+ 
+  561  notepad dev.auto.tf
+  562  git status
+###this diff command you can use it to view the difference between previous commint and the changes your are doing it
+  563  git diff dev.auto.tf
+  
+  565  git add dev.auto.tf
+  566  git commit -m "modified the file"
+
 
