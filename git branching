@@ -12,3 +12,15 @@
   564  git add .
   565  git commit -m "terraform intialization"
   566  git log
+####creating the vnet branch
+ 572  git branch vnet
+  573  git branch
+  574  git checkout vnet
+  575  git branch
+  576  git log
+  577  echo "creating vnet file" > vnet.tf
+  578  git status
+  579  git add .
+  580  git commit -m "added in vnet branch"
+  581  git log
+  582  git reflog
