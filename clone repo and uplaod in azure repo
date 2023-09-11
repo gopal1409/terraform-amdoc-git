@@ -11,3 +11,8 @@ rm-rf .git
 git init
 git add .
 git commit -m "intialized terraform repo"
+##3lets generate the key
+ssh-keygen -t rsa
+#####once generated 
+cat C:\Users\gopal/.ssh/id_rsa.pub
+then copy the key
