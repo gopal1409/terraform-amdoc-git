@@ -7,4 +7,4 @@ rm .git
 ##we will intialize the git repo with our repo
 git init
 git add .
-git commit - "intialized terraform repo"
+git commit -m "intialized terraform repo"
