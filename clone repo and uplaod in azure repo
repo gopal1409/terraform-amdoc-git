@@ -22,3 +22,12 @@ ssh-keygen -t rsa
 #####once generated they key copy the public key and paste inside the setting of azure devops
 cat C:\Users\gopal/.ssh/id_rsa.pub
 ###then finally do git push origin and nameofthebranch
+
+####remote branching and upload the remote branch 
+6 git branch vnet
+   7 git branch
+###git branch -a will show local and remote branch
+   8 git branch -a
+###to upload the remote branch git push origin branchname
+   9 git push origin vnet
+  10 git branch -a
