@@ -30,4 +30,46 @@
   585  git log
   586  git checkout vnet
   587  git log
+###extending the branch
+592  git branch ai
+  593  git checkout ai
+  594  echo "creating an ai feature" > ai
+  595  git status
+  596  git commit -m "ai branch intialized"
+  597  git add .
+  598  git commit -m "ai branch intialized"
+  599  git branch
+  600  git branch ml
+  601  git checkout ml
+  602  echo "this is my ml" > ml
+  603  git add .
+  604  git commit -m "ml"
+  605  git log
+  606  ls
+  607  cat ml
+#branch mergeing
+  608  git checkout master
+  609  git branch
+  610  ls
+  611  git checkout vnet
+  612  ls
+  613  git branch
+  614  git checkout master
+  615  git branch
+  616  git merge vnet
+  617  ls
+  618  git branch
+  619  ls
+  620  cat vnet.tf
+##branch conflict git always do apend operation
+  621  echo "another line in main.tf" >> main.tf
+  622  git status
+  623  git add .
+  624  git commit -m "another line in main.tf"
+  625  git checkout vnet
+  626  ls
+  627  cat main.tf
+  628  echo "main" >> main.tf
+  629  cat main.tf
+  630  git checkout master
 
