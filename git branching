@@ -72,4 +72,13 @@
   628  echo "main" >> main.tf
   629  cat main.tf
   630  git checkout master
+###test conflict
+ 638  git checkout master
+  639  git commit -m "vnet main file change"
+  640  git add .
+  641  git commit -m "vnet main file change"
+  642  git checkout master
+  643  git merge vnet
+  644  cat main.tf
+
 
