@@ -1,0 +1,14 @@
+ 553  cd ..
+  554  mkdir test2
+  555  cd test2
+  556  git init
+  557  touch main.tf
+  558  touch varaibles.tf
+  559  echo "this is the main file for terraform" > main.tf
+  560  echo "this is the variable file for terraform" > varaibles.tf
+  561  cat main.tf
+  562  cat varaibles.tf
+  563  git status
+  564  git add .
+  565  git commit -m "terraform intialization"
+  566  git log
