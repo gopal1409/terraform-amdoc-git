@@ -1,0 +1,10 @@
+cd ..
+git clone https://github.com/gopal1409/amdoc-terraform-az.git
+cd amdoc-terraform-az
+##we will intialize the git repo with our repo
+####delete the previous refrence
+rm .git
+##we will intialize the git repo with our repo
+git init
+git add .
+git commit - "intialized terraform repo"
