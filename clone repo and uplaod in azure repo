@@ -1,18 +1,24 @@
 cd ..
+####first we clone the customer repo who told us to modify the content of existing terraform script. 
+###to do the same we clone his repo in my local vm
 git clone https://github.com/gopal1409/amdoc-terraform-az.git
+###by default it create a folder with the name of the repo we will go inside the folder. 
 cd amdoc-terraform-az
-##we will intialize the git repo with our repo
-####delete the previous refrence
-###if you use powershell it will be 
+##3now we need to modify the code and upload the same inside my repository in azure devops. 
+###to do the same we delete the .git folder
 rm .git
 ###if you use gitbash or linue
 rm-rf .git
-##we will intialize the git repo with our repo
+###then again reintilized the same using git init
 git init
 git add .
 git commit -m "intialized terraform repo"
+######then we need to add the remote repo which is already there in azure devops
+###to add an remote reposistory
+git remote add orgin remote-repopath-which will you get it from a repository which path we need to select ssh path. 
+###becuase we are authenticating using ssh key pair
 ##3lets generate the key
 ssh-keygen -t rsa
-#####once generated 
+#####once generated they key copy the public key and paste inside the setting of azure devops
 cat C:\Users\gopal/.ssh/id_rsa.pub
-then copy the key
+###then finally do git push origin and nameofthebranch
