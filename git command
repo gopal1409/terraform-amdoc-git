@@ -113,5 +113,28 @@ ls
   632  git commit --amend
   633  git log
   634  git reflog
+#####git stash
+ 509  touch style.css
+  510  touch index.html
+  511  git add style.css
+  512  git status
+  513  git stash
+  514  git status
+  515  git stash pop
+  516  git stash list
+  517  git stash apply
+  518  git status
+  519  git stash
+  520  git status
+  521  git stash list
+  522  git stash -u
+  523  git status
+  524  git stash list
+  525  git stash pop stash@{1}
+  526  git stash show
+  527  git stash save "add style to css"
+  528  git log
+  529  git stash list
+  530  git log
 
 
