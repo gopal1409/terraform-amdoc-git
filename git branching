@@ -24,3 +24,10 @@
   580  git commit -m "added in vnet branch"
   581  git log
   582  git reflog
+
+###to verify the branch wise commit
+ 584  git checkout master
+  585  git log
+  586  git checkout vnet
+  587  git log
+
