@@ -31,3 +31,7 @@ cat C:\Users\gopal/.ssh/id_rsa.pub
 ###to upload the remote branch git push origin branchname
    9 git push origin vnet
   10 git branch -a
+###before pushing always do git pull
+###if somene has modify the remote repo same modification you want to download locally
+git pull
+git fetch
