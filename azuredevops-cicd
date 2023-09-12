@@ -1,0 +1,13 @@
+###first we will create an resource group
+####inside the resource group we will create a virtual machine with ubuntu software
+##3do ssh into the vm
+sudo -i
+apt-get update
+###lets install terraform go to this url select ubuntu and install terraform
+https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+###3once we install terraform we need to install docker
+apt install docker.io
+####finally we need to install azure cli
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+####then login to the azure
+az login
