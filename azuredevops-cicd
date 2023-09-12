@@ -11,3 +11,18 @@ apt install docker.io
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 ####then login to the azure
 az login
+####your agent machine is ready
+#this agent machine need to connected to your azure devops project. 
+##you need to ensure that agent need to be installed as a normal user not as a root user
+exit
+####we will create a directory inside that we will download the agent
+ 4  mkdir myagent && cd myagent
+    5  wget https://vstsagentpackage.azureedge.net/agent/3.225.0/vsts-agent-linux-x64-3.225.0.tar.gz
+    6  tar zxvf vsts-agent-linux-x64-3.225.0.tar.gz
+    7  ls
+###now we need to configure the azure devops
+    8  ./config.sh
+#####it will ask you just press y
+#####it will ask project url
+###after entering url
+##3it will ask for personal access token
