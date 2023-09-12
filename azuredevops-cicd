@@ -26,3 +26,7 @@ exit
 #####it will ask project url
 ###after entering url
 ##3it will ask for personal access token
+####to run the agent
+Optionally run the agent interactively
+If you didn't run as a service above:
+./run.sh
