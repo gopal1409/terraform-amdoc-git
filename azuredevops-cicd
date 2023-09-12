@@ -30,3 +30,7 @@ exit
 Optionally run the agent interactively
 If you didn't run as a service above:
 ./run.sh
+###next we need to install terraform plugin from this site
+https://marketplace.visualstudio.com/search?term=terraform&target=AzureDevOps&category=All%20categories&sortBy=Relevance
+###search for terraform plugin and install it. 
+#this is one time process.
