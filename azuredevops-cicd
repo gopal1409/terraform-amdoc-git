@@ -34,3 +34,5 @@ If you didn't run as a service above:
 https://marketplace.visualstudio.com/search?term=terraform&target=AzureDevOps&category=All%20categories&sortBy=Relevance
 ###search for terraform plugin and install it. 
 #this is one time process.
+####lets create a service connection
+az ad sp create-for-rbac -n "amdocs1" --role contributor --scope /subscriptions/def2cf32-c635-4684-ad00-5703dbddbe44
