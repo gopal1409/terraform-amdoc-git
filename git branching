@@ -80,5 +80,8 @@
   642  git checkout master
   643  git merge vnet
   644  cat main.tf
-
+###fast forward merge enable disable
+ git config --global --add merge.ff false
+##3to check all the global varaible
+git config --global --list
 
