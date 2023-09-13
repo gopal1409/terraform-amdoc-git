@@ -11,6 +11,9 @@ backend "azurerm" {
 ###modify another file so that we will have a different resource group name inside terraform.tfvars
 resource_group_name="rg-tf-gopal"
 ####then inside the folder do 
+###delete my git refrence
+rm .git
+rm -rf .git
 git init
 git add .
 git commit -m "terraform with remote state"
