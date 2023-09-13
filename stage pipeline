@@ -9,11 +9,11 @@ trigger:
 pool: default
  # vmImage: ubuntu-latest
 variables:
-  backendServiceArm: 'gopal-sp'
+  backendServiceArm: 'project-principal'
   backendAzureRmResourceGroupName: 'gopal-rg'
   backendAzureRmStorageAccountName: 'gopalstoraget'
   backendAzureRmContainerName: 'terraformc'
-  backendAzureRmKey: 'devpipeline.terraform.tfstate'
+  backendAzureRmKey: 'project.tfstate'
 stages:
   - stage: tfvalidate
     jobs:
@@ -33,7 +33,7 @@ stages:
               backendAzureRmResourceGroupName: 'gopa-rg'
               backendAzureRmStorageAccountName: 'gopalsac'
               backendAzureRmContainerName: 'terraform'
-              backendAzureRmKey: 'devpipeline.terraform.tfstate'
+              backendAzureRmKey: '$(backendAzureRmKey)'
           - task: TerraformTaskV4@4
             inputs:
               provider: 'azurerm'
@@ -57,12 +57,12 @@ stages:
                 backendAzureRmResourceGroupName: 'gopa-rg'
                 backendAzureRmStorageAccountName: 'gopalsac'
                 backendAzureRmContainerName: 'terraform'
-                backendAzureRmKey: 'devpipeline.terraform.tfstate'
+                backendAzureRmKey: '$(backendAzureRmKey)'
             - task: TerraformTaskV4@4
               inputs:
                 provider: 'azurerm'
                 command: 'apply'
-                environmentServiceNameAzureRM: 'gopal-sp'
+                environmentServiceNameAzureRM: '$(backendServiceArm)'
 
             
             
