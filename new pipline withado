@@ -1,0 +1,16 @@
+###lets clone a repo and change some varaible. 
+cd c:\
+git clone https://github.com/gopal1409/terraform-remote.git
+#####open the provider.tf
+backend "azurerm" {
+    resource_group_name = "gopal-rg"
+    storage_account_name = "gopalstoraget"
+    container_name = "terraformc"
+    key = "project.tfstate"
+  }
+###modify another file so that we will have a different resource group name inside terraform.tfvars
+resource_group_name="rg-tf-gopal"
+####then inside the folder do 
+git init
+git add .
+git commit -m "terraform with remote state"
