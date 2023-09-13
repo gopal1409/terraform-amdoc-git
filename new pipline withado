@@ -17,3 +17,6 @@ rm -rf .git
 git init
 git add .
 git commit -m "terraform with remote state"
+###create a new project
+##from the project copy command which is avaiable in push existin repo and paste it
+###finally do git push origin master
