@@ -38,10 +38,10 @@ stages:
             inputs:
               provider: 'azurerm'
               command: 'validate'
-    - stage: tfdeploy
-      condition: succeeded('tfvalidate')
-      dependsOn: tfvalidate
-      jobs:
+  - stage: tfdeploy
+    condition: succeeded('tfvalidate')
+    dependsOn: tfvalidate
+    jobs:
         - job: apply
           steps:
             - task: TerraformInstaller@1
@@ -63,3 +63,6 @@ stages:
                 provider: 'azurerm'
                 command: 'apply'
                 environmentServiceNameAzureRM: 'gopal-sp'
+
+            
+            
