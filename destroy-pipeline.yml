@@ -20,7 +20,7 @@ stages:
         - job: destroy
           steps:
             - task: TerraformInstaller@1
-              displayName: tfinstall
+              displayName: terraforminstall
               inputs:
                 terraformVersion: 'latest'
             - task: TerraformTaskV4@4
