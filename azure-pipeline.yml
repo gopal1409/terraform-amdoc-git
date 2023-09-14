@@ -1,0 +1,76 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+###this is azure devops specific
+parameters:
+###parameter name will be always in capital letter
+  - name: RGNAME
+    displayName: Please provide the resource group name
+    type: object
+    default: <please provide the reqauired name>
+pool: default
+ # vmImage: ubuntu-latest
+variables:
+  TF_VAR_RG_NAME: ${{parameters.RGNAME}}
+  backendServiceArm: 'project-principal'
+  backendAzureRmResourceGroupName: 'gopal-rg'
+  backendAzureRmStorageAccountName: 'gopalstoraget'
+  backendAzureRmContainerName: 'terraformc'
+  backendAzureRmKey: 'project.tfstate'
+stages:
+  - stage: tfvalidate
+    jobs:
+      - job: validate
+        continueOnError: false
+        steps:
+          - task: TerraformInstaller@1
+            displayName: tfinstall
+            inputs:
+              terraformVersion: 'latest'
+          - task: TerraformTaskV4@4
+            displayName: tfinit
+            inputs:
+              provider: 'azurerm'
+              command: 'init'
+              backendServiceArm: '$(backendServiceArm)'
+              backendAzureRmResourceGroupName: 'gopa-rg'
+              backendAzureRmStorageAccountName: 'gopalsac'
+              backendAzureRmContainerName: 'terraform'
+              backendAzureRmKey: '$(backendAzureRmKey)'
+          - task: TerraformTaskV4@4
+            inputs:
+              provider: 'azurerm'
+              command: 'validate'
+  - stage: tfdeploy
+    condition: succeeded('tfvalidate')
+    dependsOn: tfvalidate
+    jobs:
+        - job: apply
+          steps:
+            - task: TerraformInstaller@1
+              displayName: tfinstall
+              inputs:
+                terraformVersion: 'latest'
+            - task: TerraformTaskV4@4
+              displayName: tfinit
+              inputs:
+                provider: 'azurerm'
+                command: 'init'
+                backendServiceArm: '$(backendServiceArm)'
+                backendAzureRmResourceGroupName: 'gopa-rg'
+                backendAzureRmStorageAccountName: 'gopalsac'
+                backendAzureRmContainerName: 'terraform'
+                backendAzureRmKey: '$(backendAzureRmKey)'
+            - task: TerraformTaskV4@4
+              inputs:
+                provider: 'azurerm'
+                command: 'apply'
+                commandOptions: "--var-file=dev.auto.tfvars"
+                environmentServiceNameAzureRM: '$(backendServiceArm)'
+
+            
+            
